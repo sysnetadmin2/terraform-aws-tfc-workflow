@@ -1,12 +1,12 @@
 terraform {
- # cloud {
- #   organization = "jgshin-org"
- #   hostname     = "app.terraform.io" # default
+  cloud {
+    organization = "jgshin-org"
+    hostname     = "app.terraform.io" # default
 
-    #workspaces {
-    #  name = "terraform-aws-tfc-workflow"
-    #}
-  #}
+    workspaces {
+      name = "terraform-aws-tfc-workflow"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
