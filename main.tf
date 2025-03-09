@@ -21,7 +21,7 @@ provider "aws" {
     tags = {
       name        = "${var.prefix}-vpc-${var.region}"
       environment = var.environment
-      Project: "HCP Terraform workflow"
+      Project: "HCP Terraform workflowd"
     }
   }
 }
