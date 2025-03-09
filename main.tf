@@ -159,7 +159,7 @@ resource "aws_instance" "hashicat" {
 # Set up some environment variables for our script.
 # Add execute permissions to our scripts.
 # Run the deploy_app.sh script.
-resource "null_resource" "configure-cat-app" {
+resource "null_resource" "configure_cat_app" {
   count = var.ec2_count
   depends_on = [aws_eip_association.hashicat]
 
@@ -175,7 +175,7 @@ resource "null_resource" "configure-cat-app" {
       type        = "ssh"
       user        = "ubuntu"
       private_key = tls_private_key.hashicat.private_key_pem
-      host        = aws_eip.hashicat.[count.index].public_ip
+      host        = aws_eip.hashicat[count.index].public_ip
     }
   }
 
